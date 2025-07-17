@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #ece1be;
+  --dark-blue: hsl(230, 36%, 44%);
+  --dark-green: #224823;
+  --gold: #b99250;
+  --gray: #d5d1cd;
+  --light-blue: #c7cbdf;
+  --light-green: #797122;
+  /* --maroon: hsl(15, 50%, 25%);  */
+  /* variant of #632413; */
+  --maroon: #632413;
+  --pink: #c37d92;
+  --red: #cd563c;
+  --orange: #de4c31;
+
+  --font-white: hsl(180, 2%, 91%);
+  --font-black: hsl(42, 14%, 14%);
+
+  --background: hsl(50, 18%, 93%);
+  --background-dark: hsl(50, 11%, 89%);
+
+  /* --bg-light: hsl(43, 28%, 94%); */
+  --bg-light: hsl(45, 35%, 96%);
+
+  --margin: min(2vw, 2rem);
+}
+
+html {
+  font-size: min(calc(0.8vw + 12px), 20px);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--background-dark);
+}
+
+body {
+  margin: 0 auto;
+  padding: 1px 0; /* contain margins */
+  font-family: open-sans, sans-serif;
+  background: var(--background);
+  color: var(--font-black);
+  max-width: 64em;
+  box-shadow: 0 0 2em #0001;
+}
+
+section {
+  margin: calc(var(--margin) * 3) var(--margin);
+  scroll-margin-top: 5.5em;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 3em;
+  font-family: baloo;
+  font-weight: 800;
+  color: var(--light-green);
+}
+
+h2 {
+  margin: 0;
+  font-size: 2em;
+  font-family: baloo;
+  font-weight: 800;
+  color: var(--light-green);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1;
+  font-family: open-sans, sans-serif;
+  color: var(--maroon);
+}
+
+h4 {
+  font-size: 1.25em;
+  margin: 0;
+  font-family: open-sans, sans-serif;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+a {
+  color: var(--dark-blue);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.dialoger {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+dialog {
+  outline: 0;
+  cursor: pointer;
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  background: hsl(50 18% 93% / 0.9);
+}
+
+/* FORM ******************************************************************************************/
+
+form {
+  padding: 0.5em 0 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+textarea {
+  width: 100%;
+  padding: 0.2em 0.4em;
+  border: 1.5px solid var(--dark-blue);
+  border-radius: 4px;
+  background: #fff5;
+}
+
+button,
+input[type="submit"] {
+  width: auto;
+  color: var(--dark-blue);
+  background: hsl(230 100% 97% / 0.5);
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: white;
+}
+
+button:disabled,
+input[type="submit"]:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+[required]:invalid {
+  border-color: var(--orange);
+}
+
+label > span {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: var(--dark-blue);
+}
+
+.center {
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+#success {
+  max-width: 48em;
+  margin-inline: auto;
+  padding: var(--margin);
+}
+
+#refund {
+  margin-top: 4em;
+  max-width: 48em;
+  margin-inline: auto;
+  padding: 4em var(--margin) 2em;
+  border-top: 2px solid var(--background-dark);
+}
+
+#refund h2 {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
