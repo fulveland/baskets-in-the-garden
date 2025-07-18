@@ -20,7 +20,8 @@
   --orange: #de4c31;
 
   --font-white: hsl(180, 2%, 91%);
-  --font-black: #1d1907;
+  --font-black: #333127ed;
+  /* --font-black: #1d1907; */
 
   --background: #fffff6;
   --background-dark: hsl(50, 11%, 89%);
@@ -64,7 +65,7 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  margin: 0 0 0.1em 0;
   font-size: 2em;
   font-family: valkorn;
   font-weight: 800;
@@ -86,7 +87,8 @@ h4 {
 }
 
 p {
-  margin: 0.5rem 0;
+  line-height: 2.2ch;
+  margin: 0.7rem 0;
 }
 
 a {
