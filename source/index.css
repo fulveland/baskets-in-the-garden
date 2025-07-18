@@ -21,7 +21,7 @@ header .banner h1 {
   text-align: left;
   font-family: vollkorn;
   font-size: 3em;
-  color: hsl(6, 40%, 20%);
+  color: hsl(0, 17%, 98%);
 }
 
 header .subtitle {
@@ -29,12 +29,12 @@ header .subtitle {
   font-size: max(18px, 1.2em);
   font-weight: 650;
   margin: 0 0 -0.2em;
-  color: hsl(15, 50%, 25%);
+  color: hsl(0, 17%, 98%);
 }
 
 header .info {
   font-size: max(15px, 0.9em);
-  color: hsl(15, 50%, 25%);
+  color: hsl(0, 17%, 98%);
   font-family: vollkorn;
 }
 
