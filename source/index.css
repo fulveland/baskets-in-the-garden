@@ -41,32 +41,54 @@ header .info {
   font-family: Valkorn;
   opacity: 85%;
 }
+/* INTRO *******************************************************/
+/* #intro {
+} */
 
-#intro {
+.left-wrap {
   display: flex;
-  flex-flow: row wrap;
-  align-items: start;
-  gap: 1em 1.5em;
-  padding: 2em 2em 1em;
-  font-weight: bold;
-  border-top: 1px solid var(--background-dark);
-  background: linear-gradient(hsl(45, 35%, 88%), hsl(45, 35%, 93%) 3em, var(--bg-light));
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-#intro p {
-  flex: 1 0 15em;
-  margin: 0;
+.left-wrap img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
-#intro form {
-  flex: 1 0 15em;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-flow: column;
-  gap: 0.5em;
+.left-content {
+  flex: 1;
 }
 
+.left-content h2,
+.left-content p,
+.left-content .no-break {
+  margin: 0.5em 0;
+}
+
+.left-content .no-break p:nth-last-child(2),
+.left-content .no-break p:last-child {
+  white-space: nowrap;
+}
+
+@media (max-width: 750px) {
+  .left-wrap {
+    display: block;
+    overflow: hidden;
+  }
+
+  .left-wrap img {
+    float: left;
+    width: 50%;
+    margin: 0 1rem 1rem 0;
+    display: block;
+  }
+}
+
+/* NAV *******************************************************/
 nav {
   position: sticky;
   display: flex;
@@ -182,6 +204,12 @@ section {
   .lefty > img {
     width: 100%;
   }
+  #intro .lefty > img {
+    width: 12em;
+  }
+  #intro {
+    padding: 2em 1em 1em;
+  }
 }
 
 .list .lefty {
@@ -232,21 +260,6 @@ section {
 .halfers p + p,
 .halfers h3 + p {
   margin-top: 0.5rem;
-}
-
-.meal-cluster {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-height: 24.6em;
-  gap: 0.2em;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.meal-cluster img {
-  object-fit: cover;
-  width: 100%;
-  height: 6em;
 }
 
 @media (max-width: 750px) {
