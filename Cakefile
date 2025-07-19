@@ -29,10 +29,6 @@ task "build", "", ()->
   compile "static", "source/**/*.!(ts|html)", (path)->
     copy path, replace path, "source/": "public/"
 
-  compile "typescript", "source/**/*.ts", (path)->
-    dest = replace path, "source/": "public/", ".ts": ".js"
-    write dest, typescript path
-
 task "watch", "Recompile on changes.", ()->
   watch "source", "build", reload
   watch "templates", "build", reload
