@@ -128,48 +128,71 @@ nav a:hover {
   margin-top: var(--margin);
 }
 
+section {
+  max-width: 50em;
+  margin-inline: auto;
+  padding: 0 var(--margin);
+}
+
 .narrow {
-  max-width: 32em;
-  margin: 0 auto;
+  max-width: 34em;
+  margin: 0 auto 2em 0;
 }
 
 .lefty {
   display: grid;
   grid-template-areas:
-    "img h2"
+    "img title"
     "img div";
-  grid-template-rows: max-content auto;
-  place-items: center start;
-  gap: 0 1em;
+  grid-template-columns: max-content auto;
+  gap: 0.5em 1em;
 }
 
 .lefty > img {
   grid-area: img;
+  place-self: center start;
   width: 13em;
   border-radius: 8px;
   box-shadow: 0 1px 4px #6421, 0 2px 8px #6421, 0 4px 16px #6421;
   rotate: -1deg;
 }
 
-.lefty h1 {
-  grid-area: h1;
+.lefty h2 {
+  grid-area: title;
+  place-self: end start;
   text-align: left;
   line-height: 1;
 }
 
 .lefty div {
   grid-area: div;
+  place-self: start;
 }
 
 @media (max-width: 750px) {
   .lefty {
-    grid-template-areas: "h1" "img" "div";
+    grid-template-areas: "title" "img" "div";
+    grid-template-columns: auto;
     place-items: center;
+  }
+  .list .lefty > img {
+    width: 8em;
   }
 
   .lefty > img {
     width: 100%;
   }
+}
+
+.list .lefty {
+  margin: 2em 0 2em 0;
+}
+
+.list .lefty h2 {
+  font-size: 1.3em;
+}
+.list .lefty h3 {
+  font-size: 1em;
 }
 
 /* ATTENDING ******************************************************************************************/
@@ -308,8 +331,7 @@ iframe {
 
 #register {
   max-width: 50em;
-  padding: 0 var(--margin);
-  margin: 3em auto 3em;
+  margin: 3em auto;
 }
 
 #register form {
