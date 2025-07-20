@@ -106,38 +106,53 @@ img {
 /* Form and input elements */
 
 form {
-  padding: 0.5em 0 1em;
+  --bg: #fff8;
+  --bg-active: #fffe;
+  --outline: #0003;
+  --shadow: 0 4px 12px #0002;
 }
 
-label div {
-  /* TODO: This is inconsistent with the type hierarchy */
-  font-size: 0.9em;
-  font-weight: bold;
-  color: var(--dark-blue);
+form.dark {
+  --bg: #333d;
+  --bg-active: #555d;
+  --outline: #fff;
+  --shadow: 0 3px 6px #0004;
 }
+
+form div {
+  display: flex;
+  box-shadow: var(--shadow);
+  border-radius: .3em; /* we need this for the box shadow… */
+}
+
+/* and these for the focus outline… */
+form div > :first-child { border-top-left-radius: .3em; border-bottom-left-radius: .3em; }
+form div > :last-child { border-top-right-radius: .3em; border-bottom-right-radius: .3em; }
 
 input {
-  padding: 0.2em 0.4em;
-  border: 1.5px solid #fff;
+  padding: 0.3em 0.4em .2em;
+  border: 0;
   font: inherit;
-  border-radius: 4px;
-  background: #000;
+  color: inherit;
+  background: var(--bg);
+}
+
+input:focus-visible {
+  outline: 2px solid var(--outline);
+  outline-offset: -2px;
 }
 
 input[type="email"] {
   width: 100%;
-  background: #fff5;
 }
 
 input[type="submit"] {
   width: auto;
-  color: var(--dark-blue);
-  background: hsl(230 100% 97% / 0.5);
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background: white;
+  background: var(--bg-active);
 }
 
 input[type="submit"]:disabled {

@@ -13,31 +13,34 @@ header .banner {
   position: absolute;
   top: 1.5em;
   left: 3em;
-  font-size: min(2.8vw, 36px);
+  width: calc(100% - 6em);
+  font-size: min(2.5vw, 32px);
+  font-family: vollkorn;
+  color: #fffff6;
+  opacity: 85%;
 }
 
 header .banner .title {
   margin: 0 0 -0.3em -0.15em;
-  font: 580 3.4em / 1 dance;
-  color: #fffff6;
-  opacity: 88%;
+  font: 580 3.7em / 1 dance;
 }
 
 header .banner .subtitle {
-  font-family: vollkorn;
+  margin: 1em 0 0.2em 1em;
   font-size: max(18px, 1.2em);
   font-weight: 650;
-  margin: 1em 0 0.2em 1em;
-  color: hsl(0, 17%, 98%);
-  opacity: 85%;
 }
 
 header .banner .info {
-  font-size: max(15px, 0.9em);
-  color: #fffff6;
   margin: 0 0 0 1.3em;
-  font-family: vollkorn;
-  opacity: 85%;
+  font-size: max(15px, 1em);
+}
+
+header .banner form {
+  width: 32rem;
+  max-width: calc(100% - 6em);
+  margin: .2em 0 0 1.3em;
+  font-size: max(15px, 1em);
 }
 
 /* Intro */
@@ -200,4 +203,16 @@ iframe {
 /* Register */
 #register{
   text-align: center;
+}
+
+/* Footer */
+
+footer p {
+  max-width: 30em;
+  margin: 0 auto .5em;
+}
+
+footer form {
+  max-width: 20em;
+  margin: 0 auto;
 }
