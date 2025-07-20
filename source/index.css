@@ -195,3 +195,9 @@ iframe {
   flex: 0 0 auto;
   grid-area: address;
 }
+
+
+/* Register */
+#register{
+  text-align: center;
+}
