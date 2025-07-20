@@ -118,9 +118,10 @@ label div {
 
 input {
   padding: 0.2em 0.4em;
-  border: 1.5px solid var(--dark-blue);
+  border: 1.5px solid #fff;
   font: inherit;
   border-radius: 4px;
+  background: #000;
 }
 
 input[type="email"] {
