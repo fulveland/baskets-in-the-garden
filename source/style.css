@@ -257,16 +257,3 @@ transform: translate y axis
 
 
 
-@media (max-width: 500px) {
-    #schedule p {
-        font-size: 0.55rem;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-.container{
-    width: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax (100px 1fr));
-  }
