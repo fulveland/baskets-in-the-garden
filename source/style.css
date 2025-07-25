@@ -95,6 +95,10 @@ a {
   cursor: pointer;
 }
 
+.no-break {
+    white-space: nowrap;
+}
+
 /* Media elements */
 
 img {
@@ -173,3 +177,96 @@ a.luma-checkout--button:hover {
   color: #000;
   box-shadow: none;
 }
+
+
+/* OLLLLLLLD */
+
+
+
+/* .workshop .gallery.horizontal .small-imag {
+    flex: 1 1 33%;
+} */
+
+@media (max-width: 600px) {
+    .workshop .gallery {
+        flex: 1 1 auto;
+        margin-bottom: 1em;
+    }
+}
+
+.workshop .gallery img {
+    width: 100%;
+    border: 0.6em solid var(--off-white);
+    border-radius: 2px;
+}
+
+.workshop .description {
+    flex-basis: 450px;
+}
+
+.workshop .description .details span {
+    display: inline-block;
+}
+
+.beginner {
+    display: inline-block;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: var(--light-pastel-green);
+}
+
+.workshop .description .seats-left {
+    margin-top: 1em;
+    font-style: italic;
+}
+
+/** CLASS ROOM COLOURS **/
+
+.room {
+    display: inline-block;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+.header {
+    background-color: var(--header);
+}
+
+.main {
+    background-color: var(--main);
+}
+
+.green-room {
+    background-color: var(--green);
+}
+
+.tent-front {
+    background-color: var(--tent-front);
+}
+
+.tent-back {
+    background-color: var(--tent-back);
+}
+
+/* 
+transform: translate y axis
+
+-margins */
+
+
+
+
+
+@media (max-width: 500px) {
+    #schedule p {
+        font-size: 0.55rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.container{
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (100px 1fr));
+  }

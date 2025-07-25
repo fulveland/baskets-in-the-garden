@@ -144,6 +144,16 @@ header .banner form {
   border-radius: 8px;
 }
 
+.halfers i {
+  font-style: normal;
+  margin-inline: .5em;  
+}
+
+.halfers i:first-of-type {
+  margin-left: 0;
+}
+
+
 @media (max-width: 750px) {
   .halfers {
     grid-template-columns: 1fr;

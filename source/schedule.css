@@ -1,0 +1,370 @@
+/** Schedule CSS **/
+#schedule {
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: 0.35em 0;
+}
+
+.schedule-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(9em, auto) repeat(6, minmax(1em, 1fr));
+    grid-template-rows: 2em 2em repeat(7, 2em);
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.18em;
+}
+
+:root {
+    --mar: 0.25em;
+    --tableyellow: #fff5e6;
+    --tableblue: #f1e4fb;
+    --roomcolour: #f795a6;
+}
+
+.schedule-grid div.pm p {
+    padding-top: 0.2em;
+}
+
+.schedule-grid div.am p {
+    padding: 0.2em;
+}
+
+/* .schedule-grid div.am.friday {
+    margin: 0;
+    padding: 0;
+} */
+
+.schedule-grid div.name {
+    order: 1;
+    grid-row: 1 / -1;
+    grid-column: 1 / 1;
+}
+
+.schedule-grid div.day.friday {
+    order: 2;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.schedule-grid div.day {
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    justify-content: center;
+}
+
+.schedule-grid div.day p {
+    display: flex;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.schedule-grid div.saturday {
+    order: 2;
+    grid-column: 4 / span 2;
+    grid-row: 1 / 1;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    padding: 0;
+    text-align: center;
+}
+
+.schedule-grid div.sunday {
+    order: 2;
+    grid-column: 6 / span 2;
+    grid-row: 1 / 1;
+    margin-left: 0.1em;
+    margin-right: 0.2em;
+    padding: 0;
+    text-align: center;
+}
+
+.schedule-grid div.am.friday {
+    order: 3;
+    grid-column: 2 / span 1;
+    grid-row: 2 / -1;
+    background-color: var(--tableyellow);
+    margin: 0;
+    padding: 0;
+    margin-left: var(--mar);
+}
+
+.schedule-grid div.pm.friday {
+    order: 3;
+    grid-column: 3 / span 1;
+    grid-row: 2 / -1;
+    background-color: var(--tableblue);
+    margin: 0;
+    padding: 0;
+    margin-right: var(--mar);
+}
+
+.schedule-grid div.am.saturday {
+    order: 3;
+    grid-column: 4 / span 1;
+    grid-row: 2 / -1;
+    background-color: var(--tableyellow);
+    margin: 0;
+    padding: 0;
+    margin-left: var(--mar);
+}
+
+.schedule-grid div.pm.saturday {
+    order: 3;
+    grid-column: 5 / span 1;
+    grid-row: 2 / -1;
+    background-color: var(--tableblue);
+    margin: 0;
+    padding: 0;
+    margin-right: var(--mar);
+}
+.schedule-grid div.am.sunday {
+    order: 3;
+    grid-column: 6 / span 1;
+    grid-row: 2 / -1;
+    background-color: var(--tableyellow);
+    margin: 0;
+    padding: 0;
+    margin-left: var(--mar);
+}
+
+.schedule-grid div.pm.sunday {
+    order: 3;
+    grid-column: 7 / span 1;
+    grid-row: 2 / -1;
+    background-color: var(--tableblue);
+    margin: 0;
+    padding: 0;
+    margin-right: var(--mar);
+}
+
+.schedule-grid div.workshop-name {
+    display: flex;
+    order: 7;
+    grid-column: 1 / 1;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 0em 0.5em 0 0;
+    /* margin: auto 0; */
+    justify-content: flex-end;
+    /* align-content: center; */
+}
+
+.schedule-grid div.bubble {
+    order: 8;
+    align-self: start;
+    background-color: black;
+    height: 100%;
+    border-radius: 0.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.schedule-grid div.workshop-name p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+
+    /* justify-content: center;
+    vertical-align: middle;
+    align-self: center;
+    margin: auto 0;
+    justify-self: center; */
+}
+
+.am > p {
+    text-align: center;
+}
+
+.pm > p {
+    text-align: center;
+}
+
+
+.schedule-grid div.cattail-cubby {
+    grid-row: 4 / span 1;
+}
+.schedule-grid div.cattail-cubby + .bubble {
+    grid-column: 3 / span 2;
+    margin-right: var(--mar);
+    background-color: black;
+}
+
+.schedule-grid div.large-willow-basket {
+    grid-row: 5 / span 1;
+}
+.schedule-grid div.large-willow-basket + .bubble {
+    grid-column: 2 / span 2;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--green);
+}
+
+.schedule-grid div.basket-from-the-garden {
+    grid-row: 6 / span 1;
+}
+.schedule-grid div.basket-from-the-garden + .bubble {
+    grid-column: 2 / span 4;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--tent-back);
+}
+
+.schedule-grid div.woven-bulrush-vessel {
+    grid-row: 7 / span 1;
+}
+.schedule-grid div.woven-bulrush-vessel + .bubble {
+    grid-column: 4 / span 1;
+    margin-left: var(--mar);
+    background-color: var(--green);
+}
+
+.schedule-grid div.tiny-basket {
+    grid-row: 8 / span 1;
+}
+.schedule-grid div.tiny-basket + .bubble {
+    grid-column: 4 / span 1;
+    margin-left: var(--mar);
+    background-color: var(--header);
+}
+
+.schedule-grid div.pine-needle-coiling-pm {
+    grid-row: 9 / span 1;
+}
+.schedule-grid div.pine-needle-coiling-pm + .bubble {
+    grid-column: 5 / span 1;
+    margin-right: var(--mar);
+    background-color: var(--header);
+}
+
+.schedule-grid div.willow-wreath-with-wried-flowers {
+    grid-row: 10 / span 1;
+}
+.schedule-grid div.willow-wreath-with-wried-flowers + .bubble {
+    grid-column: 5 / span 1;
+    margin-right: var(--mar);
+    background-color: var(--green);
+}
+
+.schedule-grid div.willow-dragon-fly {
+    grid-row: 11 / span 1;
+}
+.schedule-grid div.willow-dragon-fly + .bubble {
+    grid-column: 5 / span 1;
+    margin-right: var(--mar);
+    background-color: var(--tent-front);
+}
+
+.schedule-grid div.birch-bark-crazy-quilt-jewelry {
+    grid-row: 12 / span 1;
+}
+.schedule-grid div.birch-bark-crazy-quilt-jewelry + .bubble {
+    grid-column: 4 / span 2;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--main);
+}
+
+.schedule-grid div.fitched-round-basket {
+    grid-row: 13 / span 1;
+}
+.schedule-grid div.fitched-round-basket + .bubble {
+    grid-column: 4 / span 2;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--main);
+}
+
+.schedule-grid div.mini-baskets {
+    grid-row: 14 / span 1;
+}
+.schedule-grid div.mini-baskets + .bubble {
+    grid-column: 6 / span 1;
+    margin-left: var(--mar);
+    background-color: var(--tent-back);
+}
+
+.schedule-grid div.willow-flower-with-dom {
+    grid-row: 15 / span 1;
+}
+.schedule-grid div.willow-flower-with-dom + .bubble {
+    grid-column: 7 / span 1;
+    margin-right: var(--mar);
+    background-color: var(--tent-back);
+}
+
+.schedule-grid div.diagonal-weave-bark-pouch {
+    grid-row: 16 / span 1;
+}
+.schedule-grid div.diagonal-weave-bark-pouch + .bubble {
+    grid-column: 6 / span 2;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--green);
+}
+
+.schedule-grid div.ribbed-basket {
+    grid-row: 17 / span 1;
+}
+.schedule-grid div.ribbed-basket + .bubble {
+    grid-column: 6 / span 2;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--tent-front);
+}
+* .schedule-grid div.it-could-be-willow {
+    grid-row: 18 / span 1;
+}
+.schedule-grid div.it-could-be-willow + .bubble {
+    grid-column: 6 / span 2;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--header);
+}
+
+.schedule-grid div.willow-garden-bee-skep {
+    grid-row: 19 / span 1;
+}
+.schedule-grid div.willow-garden-bee-skep + .bubble {
+    grid-column: 6 / span 2;
+    margin-left: var(--mar);
+    margin-right: var(--mar);
+    background-color: var(--main);
+}
+
+.schedule-grid div.open-weave {
+    grid-row: 20 / span 1;
+}
+.schedule-grid div.open-weave + .bubble {
+    grid-column: 2 / span 6;
+    margin-right: var(--mar);
+    margin-left: var(--mar);
+    background-color: var(--main);
+}
+
+/* 
+.schedulelkjlkjas {
+    text-decoration: none;
+}
+
+.schedulelkjlkjas:hover {
+    text-decoration: underline;
+} */
+
+
+@media (max-width: 500px) {
+    #schedule p {
+        font-size: 0.55rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.container{
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (100px 1fr));
+  }
