@@ -1,8 +1,7 @@
 /** Schedule CSS **/
 #schedule {
-    max-width: 60ch;
     margin: 0 auto;
-    padding: 0.35em 0;
+    padding: 0.35em 0 2em 0;
 }
 
 .schedule-grid {
@@ -16,10 +15,26 @@
 
 :root {
     --mar: 0.25em;
-    --tableyellow: #fff5e6;
-    --tableblue: #f1e4fb;
-    --roomcolour: #f795a6;
+    --tableyellow: #FFF8E6;
+    --tableblue: #E6E9FB;
+    --roomcolour: #BBC3EE;
 }
+
+
+
+/* :root {
+    --mar: 0.25em;
+    --tableyellow: #FFF8E6;
+    --tableblue: #EDE5FB;
+    --roomcolour: #B8A2E3;
+} */
+
+/* :root {
+    --mar: 0.25em;
+    --tableyellow: #FFF0E0;
+    --tableblue: #EDE9F3;
+    --roomcolour: #7DBFD8;
+} */
 
 .schedule-grid div.pm p {
     padding-top: 0.2em;
@@ -185,164 +200,61 @@
 
 
 .schedule-grid div.cattail-cubby {
-    grid-row: 4 / span 1;
+    grid-row: 3 / span 1;
 }
 .schedule-grid div.cattail-cubby + .bubble {
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 2;
     margin-right: var(--mar);
-    background-color: black;
+    margin-left: var(--mar);
+    background-color: var(--roomcolour);
 }
 
 .schedule-grid div.large-willow-basket {
-    grid-row: 5 / span 1;
+    grid-row: 4 / span 1;
 }
 .schedule-grid div.large-willow-basket + .bubble {
-    grid-column: 2 / span 2;
-    margin-left: var(--mar);
+    grid-column: 4 / span 4;
     margin-right: var(--mar);
-    background-color: var(--green);
+    margin-left: var(--mar);
+    background-color: var(--roomcolour);
 }
 
 .schedule-grid div.basket-from-the-garden {
-    grid-row: 6 / span 1;
+    grid-row: 5 / span 1;
 }
 .schedule-grid div.basket-from-the-garden + .bubble {
-    grid-column: 2 / span 4;
-    margin-left: var(--mar);
+    grid-column: 4 / span 2;
     margin-right: var(--mar);
-    background-color: var(--tent-back);
+    margin-left: var(--mar);
+    background-color: var(--roomcolour);
+}
+
+.schedule-grid div.tiny-basket {
+    grid-row: 6 / span 1;
+}
+.schedule-grid div.tiny-basket + .bubble {
+    grid-column: 6 / span 1;
+    margin-left: var(--mar);
+    background-color: var(--roomcolour);
 }
 
 .schedule-grid div.woven-bulrush-vessel {
     grid-row: 7 / span 1;
 }
 .schedule-grid div.woven-bulrush-vessel + .bubble {
-    grid-column: 4 / span 1;
-    margin-left: var(--mar);
-    background-color: var(--green);
-}
-
-.schedule-grid div.tiny-basket {
-    grid-row: 8 / span 1;
-}
-.schedule-grid div.tiny-basket + .bubble {
-    grid-column: 4 / span 1;
-    margin-left: var(--mar);
-    background-color: var(--header);
-}
-
-.schedule-grid div.pine-needle-coiling-pm {
-    grid-row: 9 / span 1;
-}
-.schedule-grid div.pine-needle-coiling-pm + .bubble {
-    grid-column: 5 / span 1;
-    margin-right: var(--mar);
-    background-color: var(--header);
-}
-
-.schedule-grid div.willow-wreath-with-wried-flowers {
-    grid-row: 10 / span 1;
-}
-.schedule-grid div.willow-wreath-with-wried-flowers + .bubble {
-    grid-column: 5 / span 1;
-    margin-right: var(--mar);
-    background-color: var(--green);
-}
-
-.schedule-grid div.willow-dragon-fly {
-    grid-row: 11 / span 1;
-}
-.schedule-grid div.willow-dragon-fly + .bubble {
-    grid-column: 5 / span 1;
-    margin-right: var(--mar);
-    background-color: var(--tent-front);
-}
-
-.schedule-grid div.birch-bark-crazy-quilt-jewelry {
-    grid-row: 12 / span 1;
-}
-.schedule-grid div.birch-bark-crazy-quilt-jewelry + .bubble {
-    grid-column: 4 / span 2;
-    margin-left: var(--mar);
-    margin-right: var(--mar);
-    background-color: var(--main);
-}
-
-.schedule-grid div.fitched-round-basket {
-    grid-row: 13 / span 1;
-}
-.schedule-grid div.fitched-round-basket + .bubble {
-    grid-column: 4 / span 2;
-    margin-left: var(--mar);
-    margin-right: var(--mar);
-    background-color: var(--main);
-}
-
-.schedule-grid div.mini-baskets {
-    grid-row: 14 / span 1;
-}
-.schedule-grid div.mini-baskets + .bubble {
-    grid-column: 6 / span 1;
-    margin-left: var(--mar);
-    background-color: var(--tent-back);
-}
-
-.schedule-grid div.willow-flower-with-dom {
-    grid-row: 15 / span 1;
-}
-.schedule-grid div.willow-flower-with-dom + .bubble {
     grid-column: 7 / span 1;
-    margin-right: var(--mar);
-    background-color: var(--tent-back);
-}
-
-.schedule-grid div.diagonal-weave-bark-pouch {
-    grid-row: 16 / span 1;
-}
-.schedule-grid div.diagonal-weave-bark-pouch + .bubble {
-    grid-column: 6 / span 2;
-    margin-left: var(--mar);
-    margin-right: var(--mar);
-    background-color: var(--green);
-}
-
-.schedule-grid div.ribbed-basket {
-    grid-row: 17 / span 1;
-}
-.schedule-grid div.ribbed-basket + .bubble {
-    grid-column: 6 / span 2;
-    margin-left: var(--mar);
-    margin-right: var(--mar);
-    background-color: var(--tent-front);
-}
-* .schedule-grid div.it-could-be-willow {
-    grid-row: 18 / span 1;
-}
-.schedule-grid div.it-could-be-willow + .bubble {
-    grid-column: 6 / span 2;
-    margin-left: var(--mar);
-    margin-right: var(--mar);
-    background-color: var(--header);
-}
-
-.schedule-grid div.willow-garden-bee-skep {
-    grid-row: 19 / span 1;
-}
-.schedule-grid div.willow-garden-bee-skep + .bubble {
-    grid-column: 6 / span 2;
-    margin-left: var(--mar);
-    margin-right: var(--mar);
-    background-color: var(--main);
+        margin-right: var(--mar);
+    background-color: var(--roomcolour);
 }
 
 .schedule-grid div.open-weave {
-    grid-row: 20 / span 1;
+    grid-row: 8 / span 1;
 }
 .schedule-grid div.open-weave + .bubble {
     grid-column: 2 / span 6;
     margin-right: var(--mar);
     margin-left: var(--mar);
-    background-color: var(--main);
+    background-color: var(--roomcolour);
 }
 
 /* 
