@@ -20,22 +20,6 @@
     --roomcolour: #BBC3EE;
 }
 
-
-
-/* :root {
-    --mar: 0.25em;
-    --tableyellow: #FFF8E6;
-    --tableblue: #EDE5FB;
-    --roomcolour: #B8A2E3;
-} */
-
-/* :root {
-    --mar: 0.25em;
-    --tableyellow: #FFF0E0;
-    --tableblue: #EDE9F3;
-    --roomcolour: #7DBFD8;
-} */
-
 .schedule-grid div.pm p {
     padding-top: 0.2em;
 }
@@ -269,7 +253,7 @@
 
 @media (max-width: 500px) {
     #schedule p {
-        font-size: 0.55rem;
+        /* font-size: 0.55rem; */
         margin: 0;
         padding: 0;
     }
