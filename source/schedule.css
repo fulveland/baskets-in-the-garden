@@ -7,10 +7,11 @@
 .schedule-grid {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(9em, auto) repeat(6, minmax(1em, 1fr));
-    grid-template-rows: 2em 2em repeat(7, 2em);
+    grid-template-columns: minmax(9em, auto) repeat(7, minmax(1em, 1fr));
+    grid-template-rows: 2em 2em repeat(8, 2em);
     grid-row-gap: 0.5em;
     grid-column-gap: 0.18em;
+    
 }
 
 :root {
@@ -143,7 +144,7 @@
     order: 7;
     grid-column: 1 / 1;
     height: 100%;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 0em 0.5em 0 0;
     /* margin: auto 0; */
     justify-content: flex-end;
@@ -213,8 +214,18 @@
     background-color: var(--roomcolour);
 }
 
-.schedule-grid div.tiny-basket {
+.schedule-grid div.cedar-bark {
     grid-row: 6 / span 1;
+}
+.schedule-grid div.cedar-bark + .bubble {
+    grid-column: 5 / span 1;
+    margin-right: var(--mar);
+    margin-left: var(--mar);
+    background-color: var(--roomcolour);
+}
+
+.schedule-grid div.tiny-basket {
+    grid-row: 7 / span 1;
 }
 .schedule-grid div.tiny-basket + .bubble {
     grid-column: 6 / span 1;
@@ -223,7 +234,7 @@
 }
 
 .schedule-grid div.woven-bulrush-vessel {
-    grid-row: 7 / span 1;
+    grid-row: 8 / span 1;
 }
 .schedule-grid div.woven-bulrush-vessel + .bubble {
     grid-column: 7 / span 1;
@@ -232,7 +243,7 @@
 }
 
 .schedule-grid div.open-weave {
-    grid-row: 8 / span 1;
+    grid-row: 9 / span 1;
 }
 .schedule-grid div.open-weave + .bubble {
     grid-column: 2 / span 6;
