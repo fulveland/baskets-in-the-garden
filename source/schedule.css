@@ -166,7 +166,7 @@
     align-items: center;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 
     /* justify-content: center;
     vertical-align: middle;
@@ -220,7 +220,7 @@
 .schedule-grid div.cedar-bark + .bubble {
     grid-column: 5 / span 1;
     margin-right: var(--mar);
-    margin-left: var(--mar);
+
     background-color: var(--roomcolour);
 }
 
