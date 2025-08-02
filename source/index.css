@@ -109,7 +109,10 @@ header .banner form {
   line-height: 1;
 }
 
-.workshop div {
+.sold-out > * {
+  display: inline-block;
+}
+.workshop .description {
   grid-area: div;
   align-self: start;
 }
