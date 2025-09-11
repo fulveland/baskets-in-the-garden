@@ -1,0 +1,24 @@
+section.info-intro {
+  margin:  0 auto;
+  padding: 100px 0 0 0;
+  padding-inline: var(--margin);
+}
+
+section {
+  max-width: 50em;
+  margin: calc(var(--margin) * 2) auto;
+  padding-inline: var(--margin);
+  scroll-margin-top: 5.5em;
+}
+
+section.last {
+ padding-bottom: 100px;
+}
+
+h2 {
+padding-top: 40px;
+} 
+
+h3 {
+    padding: 20px 0 10px 0;
+}

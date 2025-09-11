@@ -2,7 +2,7 @@
 
 header {
   position: relative;
-  background: var(--background-dark);
+  background: var(--background);
 }
 
 header img {
@@ -20,7 +20,7 @@ header .banner {
   opacity: 85%;
 }
 
-header .banner .title {
+header .banner .title h1{
   margin: 0 0 -0.3em -0.15em;
   font: 580 3.7em / 1 dance;
 }
