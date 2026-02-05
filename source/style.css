@@ -5,8 +5,14 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
 /* Global variables */
 :root {
   --light-blue: #8d9ab2;
-  --light-brown: #a08c7d;
-  --dark-blue: hsl(230, 36%, 44%);
+
+  --light-brown:  #705150;
+  /* --light-brown: #a08c7d; */
+  /* --dark-blue: hsl(230, 36%, 44%); */
+
+  --light-blue:   #6E734E;
+
+    --dark-blue:#627890;
 
   --font-white: hsl(180, 2%, 91%);
   --font-black: #333127ed;
@@ -82,6 +88,7 @@ h1, h2, h3, p { margin: 0 }
 h3 { margin-bottom: .3rem }
 p { margin-bottom: .7rem }
 p:last-child { margin-top: 0 }
+
 
 
 h1.info {
