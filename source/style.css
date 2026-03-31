@@ -4,7 +4,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
 
 /* Global variables */
 :root {
-  --light-blue: #8d9ab2;
+  /* --light-blue: #8d9ab2; */
 
   --light-brown:  #705150;
   /* --light-brown: #a08c7d; */
