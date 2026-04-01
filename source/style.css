@@ -48,7 +48,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
 
 /* Typography */
 html { font: 400 var(--rem) / 1.3 lato }
-h2   { font: 800        2em / 1.3 vollkorn }
+h2   { font: 800        1.95em / 1.3 vollkorn }
 h3   { font: 700      1.2em / 1.3 lato, lato }
 
 
