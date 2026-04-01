@@ -1,277 +1,259 @@
-/** Schedule CSS **/
+/** Schedule **/
+:root {
+  --light-brown: #705150;
+  --med-green: #6e734e;
+  --background: #fffff6;
+
+  --schedule-gap: 0.25em;
+  --schedule-am: #e3e7d3;
+  --schedule-pm: #efe1da;
+  --schedule-bubble: #9fa882;
+  --schedule-bubble-alt: #b89a94;
+  --schedule-text: #4f4a3f;
+}
+
 #schedule {
-    margin: 0 auto;
-    padding: 0.35em 0 2em 0;
+  margin: 0 auto;
+  padding: 0.35em 0 2em;
+}
+
+#schedule h2 {
+  color: var(--light-brown);
 }
 
 .schedule-grid {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(9em, auto) repeat(7, minmax(1em, 1fr));
-    grid-template-rows: 2em 2em repeat(8, 2em);
-    grid-row-gap: 0.5em;
-    grid-column-gap: 0.18em;
-    
+  display: grid;
+  grid-template-columns: minmax(11em, auto) repeat(6, minmax(1em, 1fr));
+  grid-template-rows: 2em 1.6em repeat(12, 2.8em);
+  gap: 0.5em 0.18em;
+  margin: 0 auto;
+  color: var(--schedule-text);
 }
 
-:root {
-    --mar: 0.25em;
-    --tableyellow: #FFF8E6;
-    --tableblue: #E6E9FB;
-    --roomcolour: #BBC3EE;
+.schedule-grid .name {
+  grid-row: 1 / -1;
+  grid-column: 1;
 }
 
-.schedule-grid div.pm p {
-    padding-top: 0.2em;
+.schedule-grid .day,
+.schedule-grid .am,
+.schedule-grid .pm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
 }
 
-.schedule-grid div.am p {
-    padding: 0.2em;
+.schedule-grid .day p,
+.schedule-grid .am p,
+.schedule-grid .pm p {
+  margin: 0;
+  padding: 0;
 }
 
-/* .schedule-grid div.am.friday {
-    margin: 0;
-    padding: 0;
-} */
-
-.schedule-grid div.name {
-    order: 1;
-    grid-row: 1 / -1;
-    grid-column: 1 / 1;
+.schedule-grid .day {
+  color: var(--light-brown);
+  font-weight: 600;
 }
 
-.schedule-grid div.day.friday {
-    order: 2;
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 1;
+.schedule-grid .am p,
+.schedule-grid .pm p {
+  padding-top: 0.2em;
+  font-size: 0.92em;
 }
 
-.schedule-grid div.day {
-    display: flex;
+.schedule-grid .day.friday {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.schedule-grid .day.saturday {
+  grid-column: 4 / span 2;
+  grid-row: 1;
+}
+
+.schedule-grid .day.sunday {
+  grid-column: 6 / span 2;
+  grid-row: 1;
+}
+
+.schedule-grid .am.friday {
+  grid-column: 2;
+  grid-row: 2 / -1;
+  background-color: var(--schedule-am);
+  margin-left: var(--schedule-gap);
+}
+
+.schedule-grid .pm.friday {
+  grid-column: 3;
+  grid-row: 2 / -1;
+  background-color: var(--schedule-pm);
+  margin-right: var(--schedule-gap);
+}
+
+.schedule-grid .am.saturday {
+  grid-column: 4;
+  grid-row: 2 / -1;
+  background-color: var(--schedule-am);
+  margin-left: var(--schedule-gap);
+}
+
+.schedule-grid .pm.saturday {
+  grid-column: 5;
+  grid-row: 2 / -1;
+  background-color: var(--schedule-pm);
+  margin-right: var(--schedule-gap);
+}
+
+.schedule-grid .am.sunday {
+  grid-column: 6;
+  grid-row: 2 / -1;
+  background-color: var(--schedule-am);
+  margin-left: var(--schedule-gap);
+}
+
+.schedule-grid .pm.sunday {
+  grid-column: 7;
+  grid-row: 2 / -1;
+  background-color: var(--schedule-pm);
+  margin-right: var(--schedule-gap);
+}
+
+.schedule-grid .workshop-name {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column: 1;
+  padding: 0 0.65em 0 0;
+  height: 100%;
+  text-align: right;
+}
+
+.schedule-grid .workshop-name p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+}
+
+.schedule-grid .bubble {
+  align-self: stretch;
+  border-radius: 0.65em;
+  background-color: var(--schedule-bubble);
+  margin: 0;
+  padding: 0;
+}
+
+.schedule-grid .bubble.alt {
+  background-color: var(--schedule-bubble-alt);
+}
+
+/* row helpers */
+.schedule-grid .row-3  { grid-row: 3; }
+.schedule-grid .row-4  { grid-row: 4; }
+.schedule-grid .row-5  { grid-row: 5; }
+.schedule-grid .row-6  { grid-row: 6; }
+.schedule-grid .row-7  { grid-row: 7; }
+.schedule-grid .row-8  { grid-row: 8; }
+.schedule-grid .row-9  { grid-row: 9; }
+.schedule-grid .row-10 { grid-row: 10; }
+.schedule-grid .row-11 { grid-row: 11; }
+.schedule-grid .row-12 { grid-row: 12; }
+.schedule-grid .row-13 { grid-row: 13; }
+.schedule-grid .row-14 { grid-row: 14; }
+
+/* schedule placement helpers */
+.schedule-grid .fri-am {
+  grid-column: 2;
+  margin-left: var(--schedule-gap);
+}
+
+.schedule-grid .fri-pm {
+  grid-column: 3;
+  margin-right: var(--schedule-gap);
+}
+
+.schedule-grid .fri-full {
+  grid-column: 2 / span 2;
+  margin-left: var(--schedule-gap);
+  margin-right: var(--schedule-gap);
+}
+
+.schedule-grid .fri-sat {
+  grid-column: 2 / span 4;
+  margin-left: var(--schedule-gap);
+  margin-right: var(--schedule-gap);
+}
+
+.schedule-grid .sat-full {
+  grid-column: 4 / span 2;
+  margin-left: var(--schedule-gap);
+  margin-right: var(--schedule-gap);
+}
+
+.schedule-grid .sun-full {
+  grid-column: 6 / span 2;
+  margin-left: var(--schedule-gap);
+  margin-right: var(--schedule-gap);
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  .schedule-grid {
+    grid-template-columns: minmax(7.8em, 8.8em) repeat(6, minmax(0, 1fr));
+    grid-template-rows: 1.6em 1.2em repeat(12, 2.1em);
+    gap: 0.22em 0.12em;
+    font-size: 0.84rem;
+  }
+
+  .schedule-grid .workshop-name {
+    padding: 0 0.28em 0 0;
     align-items: center;
-    align-content: flex-end;
-    justify-content: center;
-}
+  }
 
-.schedule-grid div.day p {
-    display: flex;
-    align-self: flex-end;
-    margin: 0;
-    padding: 0;
-}
+  .schedule-grid .workshop-name p {
+    font-size: 0.72em;
+    line-height: 1.05;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 
-.schedule-grid div.saturday {
-    order: 2;
-    grid-column: 4 / span 2;
-    grid-row: 1 / 1;
-    margin-left: 0.1em;
-    margin-right: 0.1em;
-    padding: 0;
-    text-align: center;
-}
+  .schedule-grid .bubble {
+    border-radius: 0.35em;
+  }
 
-.schedule-grid div.sunday {
-    order: 2;
-    grid-column: 6 / span 2;
-    grid-row: 1 / 1;
-    margin-left: 0.1em;
-    margin-right: 0.2em;
-    padding: 0;
-    text-align: center;
+  .schedule-grid .am p,
+  .schedule-grid .pm p {
+    padding-top: 0.08em;
+    font-size: 0.7em;
+    letter-spacing: 0.02em;
+  }
 }
-
-.schedule-grid div.am.friday {
-    order: 3;
-    grid-column: 2 / span 1;
-    grid-row: 2 / -1;
-    background-color: var(--tableyellow);
-    margin: 0;
-    padding: 0;
-    margin-left: var(--mar);
-}
-
-.schedule-grid div.pm.friday {
-    order: 3;
-    grid-column: 3 / span 1;
-    grid-row: 2 / -1;
-    background-color: var(--tableblue);
-    margin: 0;
-    padding: 0;
-    margin-right: var(--mar);
-}
-
-.schedule-grid div.am.saturday {
-    order: 3;
-    grid-column: 4 / span 1;
-    grid-row: 2 / -1;
-    background-color: var(--tableyellow);
-    margin: 0;
-    padding: 0;
-    margin-left: var(--mar);
-}
-
-.schedule-grid div.pm.saturday {
-    order: 3;
-    grid-column: 5 / span 1;
-    grid-row: 2 / -1;
-    background-color: var(--tableblue);
-    margin: 0;
-    padding: 0;
-    margin-right: var(--mar);
-}
-.schedule-grid div.am.sunday {
-    order: 3;
-    grid-column: 6 / span 1;
-    grid-row: 2 / -1;
-    background-color: var(--tableyellow);
-    margin: 0;
-    padding: 0;
-    margin-left: var(--mar);
-}
-
-.schedule-grid div.pm.sunday {
-    order: 3;
-    grid-column: 7 / span 1;
-    grid-row: 2 / -1;
-    background-color: var(--tableblue);
-    margin: 0;
-    padding: 0;
-    margin-right: var(--mar);
-}
-
-.schedule-grid div.workshop-name {
-    display: flex;
-    order: 7;
-    grid-column: 1 / 1;
-    height: 100%;
-    /* background-color: #ffffff; */
-    padding: 0em 0.5em 0 0;
-    /* margin: auto 0; */
-    justify-content: flex-end;
-    /* align-content: center; */
-}
-
-.schedule-grid div.bubble {
-    order: 8;
-    align-self: start;
-    background-color: black;
-    height: 100%;
-    border-radius: 0.5em;
-    margin: 0;
-    padding: 0;
-}
-
-.schedule-grid div.workshop-name p {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    /* background-color: #ffffff; */
-
-    /* justify-content: center;
-    vertical-align: middle;
-    align-self: center;
-    margin: auto 0;
-    justify-self: center; */
-}
-
-.am > p {
-    text-align: center;
-}
-
-.pm > p {
-    text-align: center;
-}
-
-
-.schedule-grid div.cattail-cubby {
-    grid-row: 3 / span 1;
-}
-.schedule-grid div.cattail-cubby + .bubble {
-    grid-column: 2 / span 2;
-    margin-right: var(--mar);
-    margin-left: var(--mar);
-    background-color: var(--roomcolour);
-}
-
-.schedule-grid div.large-willow-basket {
-    grid-row: 4 / span 1;
-}
-.schedule-grid div.large-willow-basket + .bubble {
-    grid-column: 4 / span 4;
-    margin-right: var(--mar);
-    margin-left: var(--mar);
-    background-color: var(--roomcolour);
-}
-
-.schedule-grid div.basket-from-the-garden {
-    grid-row: 5 / span 1;
-}
-.schedule-grid div.basket-from-the-garden + .bubble {
-    grid-column: 4 / span 2;
-    margin-right: var(--mar);
-    margin-left: var(--mar);
-    background-color: var(--roomcolour);
-}
-
-.schedule-grid div.cedar-bark {
-    grid-row: 6 / span 1;
-}
-.schedule-grid div.cedar-bark + .bubble {
-    grid-column: 5 / span 1;
-    margin-right: var(--mar);
-
-    background-color: var(--roomcolour);
-}
-
-.schedule-grid div.tiny-basket {
-    grid-row: 7 / span 1;
-}
-.schedule-grid div.tiny-basket + .bubble {
-    grid-column: 6 / span 1;
-    margin-left: var(--mar);
-    background-color: var(--roomcolour);
-}
-
-.schedule-grid div.woven-bulrush-vessel {
-    grid-row: 8 / span 1;
-}
-.schedule-grid div.woven-bulrush-vessel + .bubble {
-    grid-column: 7 / span 1;
-        margin-right: var(--mar);
-    background-color: var(--roomcolour);
-}
-
-.schedule-grid div.open-weave {
-    grid-row: 9 / span 1;
-}
-.schedule-grid div.open-weave + .bubble {
-    grid-column: 2 / span 6;
-    margin-right: var(--mar);
-    margin-left: var(--mar);
-    background-color: var(--roomcolour);
-}
-
-/* 
-.schedulelkjlkjas {
-    text-decoration: none;
-}
-
-.schedulelkjlkjas:hover {
-    text-decoration: underline;
-} */
-
 
 @media (max-width: 500px) {
-    #schedule p {
-        /* font-size: 0.55rem; */
-        margin: 0;
-        padding: 0;
-    }
-}
-
-.container{
-    width: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax (100px 1fr));
+  .schedule-grid {
+    grid-template-columns: minmax(7em, 7.8em) repeat(6, minmax(0, 1fr));
+    grid-template-rows: 1.4em 1.05em repeat(12, 1.95em);
+    gap: 0.18em 0.1em;
+    font-size: 0.76rem;
   }
+
+  .schedule-grid .workshop-name {
+    padding-right: 0.22em;
+  }
+
+  .schedule-grid .workshop-name p {
+    font-size: 0.66em;
+    line-height: 1.02;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .schedule-grid .bubble {
+    border-radius: 0.3em;
+  }
+}
