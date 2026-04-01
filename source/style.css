@@ -10,7 +10,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
   /* --light-brown: #a08c7d; */
   /* --dark-blue: hsl(230, 36%, 44%); */
 
-  --light-blue:   #6E734E;
+  --med-green:   #6E734E;
+  --hover-green: #53563F;
 
     --dark-blue:#627890;
 
@@ -99,7 +100,7 @@ h1.info {
 
 
 h2 {
-  color: var(--light-blue);
+  color: var(--med-green);
 }
 
 h3 {
@@ -182,16 +183,16 @@ input[type="submit"]:disabled {
 }
 
 a.luma-checkout--button {
-  background-color: var(--cream);
-  color: inherit;
+  background-color: var(--med-green);
+  color: var(--background);
   border-radius: 8px;
   padding: .3em .8em;
   transition: none;
 }
 
 a.luma-checkout--button:hover {
-  background-color: var(--cream);
-  color: #000;
+  background-color: var(--hover-green);
+  color: var(--background);
   box-shadow: none;
 }
 
