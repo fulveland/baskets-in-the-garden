@@ -7,10 +7,12 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
   /* --light-blue: #8d9ab2; */
 
   --light-brown:  #705150;
+    --med-green:   #6E734E;
+      --background: #fffff6;
   /* --light-brown: #a08c7d; */
   /* --dark-blue: hsl(230, 36%, 44%); */
 
-  --med-green:   #6E734E;
+
   --hover-green: #53563F;
 
     --dark-blue:#627890;
@@ -19,7 +21,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
   --font-black: #333127ed;
 
 
-  --background: #fffff6;
+
    --background-dark: hsl(50, 11%, 89%);
 
 
