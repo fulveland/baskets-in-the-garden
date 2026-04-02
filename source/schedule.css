@@ -24,7 +24,7 @@
 .schedule-grid {
   display: grid;
   grid-template-columns: minmax(11em, auto) repeat(6, minmax(1em, 1fr));
-  grid-template-rows: 2em 1.6em repeat(12, 2.8em); 
+  grid-template-rows: 2em 1.6em repeat(12, 2.8em);
   gap: 0.5em 0.18em;
   margin: 0 auto;
   color: var(--schedule-text);
@@ -158,8 +158,6 @@
 .schedule-grid .row-10 { grid-row: 10; }
 .schedule-grid .row-11 { grid-row: 11; }
 .schedule-grid .row-12 { grid-row: 12; }
-.schedule-grid .row-13 { grid-row: 13; }
-/* .schedule-grid .row-14 { grid-row: 14; } */
 
 /* schedule placement helpers */
 .schedule-grid .fri-am {
